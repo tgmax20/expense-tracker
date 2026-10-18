@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>💰 Expense Tracker</h1>
+      <p>Know exactly where your money goes</p>
+    </header>
+
+    <section class="cards">
+      <div class="card balance"><span class="label">Balance</span><span class="value" id="balance">₹0</span></div>
+      <div class="card income"><span class="label">Income</span><span class="value" id="income">₹0</span></div>
+      <div class="card expense"><span class="label">Expenses</span><span class="value" id="expense">₹0</span></div>
+    </section>
+
+    <section class="panel">
+      <h2>Add transaction</h2>
+      <form id="tx-form">
+        <div class="type-toggle">
+          <button type="button" data-type="expense" class="active">Expense</button>
+          <button type="button" data-type="income">Income</button>
+        </div>
+        <input type="number" id="amount" placeholder="Amount (₹)" min="1" step="any" required />
+        <select id="category" required></select>
+        <input type="text" id="note" placeholder="Note (optional)" maxlength="60" />
+        <input type="date" id="date" />
+        <button type="submit" class="primary">Add</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Spending by category</h2>
+      <div id="categories"><p class="empty">No expenses yet.</p></div>
+    </section>
+
+    <section class="panel">
+      <h2>Transactions</h2>
+      <ul id="tx-list"><li><p class="empty">No transactions yet.</p></li></ul>
+    </section>
+
+    <footer>Made with Node.js + Express</footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

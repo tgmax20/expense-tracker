@@ -1,0 +1,1 @@
+{"dependencies":{"express":"^4.18.2"},"description":"Track income and expenses with categories, monthly summary and visual breakdown","license":"MIT","main":"server.js","name":"expense-tracker","scripts":{"start":"node server.js"},"version":"1.0.0"}
